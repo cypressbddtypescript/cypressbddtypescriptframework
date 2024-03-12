@@ -46,6 +46,6 @@ export default class ListEmployee
     }
 
     getAlertBtnOk(): void{
-        cy.get(this.DIALOG_DELETE_BUTTON).click({force:true})
+        cy.get(this.DIALOG_DELETE_BUTTON).click()
     }
 }

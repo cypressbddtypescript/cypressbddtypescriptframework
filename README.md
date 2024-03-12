@@ -48,9 +48,9 @@ npm test
 ```bash
     Spec                                              Tests  Passing  Failing  Pending  Skipped
 ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ ✔  web/Duckduckgo.feature                  00:10        3        3        -        -        -  │
+│ ✔  TC_01_AddEmployee_E2E.feature                  00:10        1        1       -        -        -
 └────────────────────────────────────────────────────────────────────────────────────────────────┘
-  ✔  All specs passed!                       00:10        3        3        -        -        -
+  ✔  All specs passed!                       00:10        1        1        -        -        -
 ```
 
 **HTML report**:

@@ -23,5 +23,6 @@ export default defineConfig({
     e2e: {
         specPattern: '**/*.feature',
         setupNodeEvents,
+        pageLoadTimeout: 60000
     },
 })
