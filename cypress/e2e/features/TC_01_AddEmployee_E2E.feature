@@ -1,9 +1,9 @@
+@smoke
 Feature: Add New Employee
     
     Add New Employee,Validate and Delete
 
-    @smoke
-    Scenario: Login into orangeHRM, add, validate and delete the employye
+    Scenario: Verify able to add the employee to the employee list
     Given I open the orangeHRM Login Page
     When I see "OrangeHRM" in the title
     When I enter username and password

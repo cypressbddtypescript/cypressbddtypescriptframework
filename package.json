@@ -5,14 +5,7 @@
   "main": "",
   "scripts": {
     "cypress:open": "cypress open",
-    "test": "npx cypress run --headed --env tags='@smoke'",
-    "tag:smoke": "cypress run --env tags='@smoke'",
-    "lint:eslint": "eslint .",
-    "lint:tsc": "tsc --noEmit",
-    "lint": "npm run lint:eslint; npm run lint:tsc",
-    "lint:fix": "npm run lint:eslint -- --fix",
-    "test:allure": "cypress run --reporter allure",
-    "report": "cucumber-html-reporter -o report/cucumber_report.html -i report/cucumber-report.json"
+    "test": "npx cypress run tags='@smoke'"
   },
   "keywords": [
     "BDD",
@@ -28,27 +21,9 @@
     "url": "https://github.com/cypressbddtypescript/cypressbddtypescriptframework"
   },
   "license": "MIT",
-  "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0"
-  },
   "devDependencies": {
-    "@shelex/cypress-allure-plugin": "^2.40.1",
-    "@types/node": "^20.10.6",
-    "@typescript-eslint/eslint-plugin": "^6.18.0",
-    "@typescript-eslint/parser": "^6.18.0",
-    "allure-commandline": "^2.27.0",
-    "cucumber": "^6.0.7",
-    "cucumber-html-reporter": "^7.1.1",
     "cypress": "^13.6.6",
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "eslint": "^8.56.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsonc": "^2.11.2",
-    "eslint-plugin-n": "^16.6.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1",
     "multiple-cucumber-html-reporter": "^3.6.2",
     "typescript": "^5.3.3"
   },
@@ -59,7 +34,7 @@
       "filePrefix": "",
       "fileSuffix": ".cucumber"
     },
-    "nonGlobalStepDefinitions": false,
+    "nonGlobalStepDefinitions": true,
     "stepDefinitions": [
       "cypress/e2e/steps/**/*.ts"
     ],
