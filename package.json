@@ -41,5 +41,8 @@
     "html": {
       "enabled": true
     }
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.2"
   }
 }

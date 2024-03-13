@@ -35,7 +35,7 @@ export default class HeaderMenu
     }
 
     getLinkEmployeeList(): void{
-        cy.get(this.VIEW_EMPLOYEE_LIST)
+        cy.get(this.VIEW_EMPLOYEE_LIST).click()
     }
 
     getLinkDirectory(): void{

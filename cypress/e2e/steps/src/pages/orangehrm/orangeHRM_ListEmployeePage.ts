@@ -11,7 +11,10 @@ export default class ListEmployee
     private readonly TABLE_COLUMN_LASTNAME = 'tr td:nth-child(4)'
     private readonly CHECKBOX_COLUMN = 'tr td:nth-child(1)'
     private readonly DIALOG_DELETE_BUTTON = '#dialogDeleteBtn'
-
+    private readonly EMPLOYEE_LIST_EDIT = 'div.oxd-table-body .oxd-table-card:nth-child(1) div button:nth-child(2)'
+    private readonly EMPLOYEE_LAST_NAME_TEXTBOX = 'input[name="lastName"]'
+    private readonly PERSONALDETAILS_SAVE_BUTTON = 'button[type="submit"]:nth-child(1)'
+    private readonly EMPLOYEE_LIST_DELETE = 'div.oxd-table-body .oxd-table-card:nth-child(1) div button:nth-child(1)'
 
     getTxtEmployeeName(text: string): void {
         cy.get(this.EMPLOYNAME).clear().type(text)
@@ -47,5 +50,31 @@ export default class ListEmployee
 
     getAlertBtnOk(): void{
         cy.get(this.DIALOG_DELETE_BUTTON).click()
+    }
+
+    getEmployeeEditDetails(): void {
+        cy.get(this.EMPLOYEE_LIST_EDIT).click()
+        cy.wait(5000)
+    }
+
+    getTxtLastName(text: string): void{
+        cy.get(this.EMPLOYEE_LAST_NAME_TEXTBOX).clear().type(text)
+    }
+
+    getSaveButton(): void {
+        cy.get(this.PERSONALDETAILS_SAVE_BUTTON).click()
+    }
+
+    getDeletedToastMessage(): void{
+        cy.contains('Success').should('be.visible')
+        cy.contains('Successfully Deleted').should('be.visible')
+    }
+
+    getEmployeeDeleteDetails(): void {
+        cy.get(this.EMPLOYEE_LIST_DELETE).click()
+    }
+
+    getYesDeleteButton(): void {
+        cy.contains('Yes, Delete').click()
     }
 }
