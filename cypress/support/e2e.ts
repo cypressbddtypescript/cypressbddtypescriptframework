@@ -38,10 +38,6 @@ declare global {
       const firstUserData = data[0]
       this.firstUserData = firstUserData
     })
-
-    //Cypress.Cookies.defaults({
-     // preserve: ['Loggedin','orangehrm'],
-    //})
 })
 
 beforeEach(function(){
