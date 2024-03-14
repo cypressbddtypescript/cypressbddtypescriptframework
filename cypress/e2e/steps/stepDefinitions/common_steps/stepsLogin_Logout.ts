@@ -17,8 +17,8 @@ When('I see {string} in the title',(title: string) =>{
 })
 
 When('I enter username and password',function(){
-    loginPage.getTxtUsername(this.data.username)
-    loginPage.getTxtPassword(this.data.password)
+    loginPage.getTxtUsername(this.firstUserData.username)
+    loginPage.getTxtPassword(this.firstUserData.password)
 })
 
 When('I click on Login',function(){

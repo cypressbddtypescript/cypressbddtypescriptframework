@@ -35,10 +35,18 @@ declare global {
 
   beforeEach(function(){
     cy.fixture('testData').then(function(data){
-        this.data = data
+      const firstUserData = data[0]
+      this.firstUserData = firstUserData
     })
 
     //Cypress.Cookies.defaults({
      // preserve: ['Loggedin','orangehrm'],
     //})
+})
+
+beforeEach(function(){
+  cy.fixture('testData').then(function(data){
+    const secondUserData = data[1]
+    this.secondUserData = secondUserData
+  })
 })

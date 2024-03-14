@@ -1,4 +1,5 @@
-{
+[
+  {
   "username": "Admin",
   "password": "admin123",
   "firstname": "Vinod",
@@ -8,4 +9,16 @@
   "new_username": "salim01",
   "new_password": "admin123",
   "vacancy_name": "Automation Test Engineer"
+},
+{
+  "username": "Admin",
+  "password": "admin123",
+  "firstname": "Modewar",
+  "lastname": "Vindo",
+  "edit_lastname": "M",
+  "empid": 840,
+  "new_username": "salim02",
+  "new_password": "admin123",
+  "vacancy_name": "Automation QA Lead"
 }
+]

@@ -41,11 +41,13 @@ Feature: Add New Employee
 
   Scenario Outline: Verify user is able to add the multiple employees to the employee list
     And Navigate to PIM and select Add Employee
-    When create employee with details "<firstName>", "<lastName>", "<employeeId>", "<username>", "<password>" and "<confirmPassword>"
+    When create employee with "<validDetails>"
+    And I click on Save Button
+    Then verify the toast success message
     And I navigate to Logout Button
     Then I click on Logout
 
     Examples:
-    |firstName|lastName|employeeId|username|password|confirmPassword|
-    |  Vinod  | Modewar| 855      |Admin   |admin123|admin123       |
-    | Modewar | Vinod  | 900      |Admin   |admin123|admin123       |
+    | validDetails       |
+    | firstUserData      |
+    | secondUserData     |
