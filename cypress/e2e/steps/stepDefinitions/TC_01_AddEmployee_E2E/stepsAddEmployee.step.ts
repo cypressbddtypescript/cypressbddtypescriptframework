@@ -2,11 +2,12 @@ import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
 import orangeHRM_HeaderMenu from '../../src/pages/orangehrm/orangeHRM_HeaderMenu'
 import orangeHRM_AddEmployee from '../../src/pages/orangehrm/orangeHRM_AddEmployeePage'
 import orangeHRM_ListEmployee from '../../src/pages/orangehrm/orangeHRM_ListEmployeePage'
-
+import EnumConstants from '../../../../enums/constants'
 
 const headerMenu = new orangeHRM_HeaderMenu()
 const addEmployee = new orangeHRM_AddEmployee()
 const listEmployee = new orangeHRM_ListEmployee()
+const toastMessages = new EnumConstants()
 
 Given('Navigate to PIM and select Add Employee',function(){
     headerMenu.getLinkPIM();
@@ -29,7 +30,7 @@ Then('I click on Save Button',function(){
 })
 
 Then('verify the toast success message',function(){
-    addEmployee.getToastMessage();
+    addEmployee.getToastMessage(toastMessages.TOAST_DETAILS, toastMessages.TOAST_CREATE_SUMMARY);
 })
 
 Given('Click on Employee List Link',function(){
@@ -87,7 +88,7 @@ Then('I click on personal details Save Button',function(){
 })
 
 Then('verify the toast success message after update employee',function(){
-    addEmployee.getToastMessage();
+    addEmployee.getToastMessage(toastMessages.TOAST_DETAILS, toastMessages.TOAST_CREATE_SUMMARY);
 })
 
 Then('user click on the emplyee delete details',function(){
@@ -99,7 +100,7 @@ Then('user click on yes delete button',function(){
 })
 
 Then('verify the toast success message after delete employee',function(){
-    listEmployee.getDeletedToastMessage();
+    addEmployee.getToastMessage(toastMessages.TOAST_DETAILS, toastMessages.TOAST_DELETE_SUMMARY);
 })
 
 Then('user click on the Navigate to PIM Menu',function(){

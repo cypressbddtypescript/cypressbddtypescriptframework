@@ -40,11 +40,6 @@ Feature: Add New Employee
     Then I click on Logout
 
   Scenario Outline: Verify user is able to add the multiple employees to the employee list
-    Given I open the orangeHRM Login Page
-    When I see "OrangeHRM" in the title
-    When I enter username and password
-    And I click on Login
-    Then I should be navigated to Application HomePage
     And Navigate to PIM and select Add Employee
     When create employee with details "<firstName>", "<lastName>", "<employeeId>", "<username>", "<password>" and "<confirmPassword>"
     And I navigate to Logout Button

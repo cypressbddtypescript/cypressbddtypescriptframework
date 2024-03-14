@@ -2,6 +2,7 @@
 
 export default class ListEmployee
 {
+
     private readonly EMPLOYNAME  = '#empsearch_employee_name_empName'
     private readonly AC_RESULTS = '.ac_results li'
     private readonly SEARCH_BUTTON = '#searchBtn'
@@ -63,11 +64,6 @@ export default class ListEmployee
 
     getSaveButton(): void {
         cy.get(this.PERSONALDETAILS_SAVE_BUTTON).click()
-    }
-
-    getDeletedToastMessage(): void{
-        cy.contains('Success').should('be.visible')
-        cy.contains('Successfully Deleted').should('be.visible')
     }
 
     getEmployeeDeleteDetails(): void {

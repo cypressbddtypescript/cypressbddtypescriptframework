@@ -55,8 +55,8 @@ export default class AddEmployee
         cy.get(this.PROFILE_PIC).contains(text)
     }
 
-    getToastMessage(): void{
-        cy.contains('Success').should('be.visible')
-        cy.contains('Successfully Saved').should('be.visible')
+    getToastMessage(toastDetails: string, toastSummary: string): void{
+        cy.contains(toastDetails).should('be.visible')
+        cy.contains(toastSummary).should('be.visible')
     }
 }
