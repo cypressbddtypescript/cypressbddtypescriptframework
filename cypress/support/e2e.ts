@@ -34,15 +34,11 @@ declare global {
 //   })
 
   beforeEach(function(){
-    cy.fixture('testData').then(function(data){
-      const firstUserData = data[0]
-      this.firstUserData = firstUserData
-    })
-})
+    cy.fixture('testData').then(function(data:any[]){     
 
-beforeEach(function(){
-  cy.fixture('testData').then(function(data){
-    const secondUserData = data[1]
-    this.secondUserData = secondUserData
-  })
+      this.firstUserData = data[0];
+      this.secondUserData = data[1];
+     
+     
+    })
 })
