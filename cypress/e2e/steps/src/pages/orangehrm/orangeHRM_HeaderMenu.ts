@@ -12,17 +12,14 @@ export default class HeaderMenu
 
     getLinkPIM(): void {
         cy.get(this.PTM_LINK).click()
-        cy.wait(5000)
     }
 
     getLinkAddEmployee(): void {
-        //cy.get(this.ADD_EMPLOYEE).click({force:true})
-        cy.contains('Add').click({force:true})
-        cy.wait(5000)
+        cy.contains('Add').click()
     }
 
     getLinkRecruitment(): void{
-        cy.get(this.RECRUITMENT).click({force:true})
+        cy.get(this.RECRUITMENT).click()
     }
 
     getLinkVacancies(): void{
@@ -38,7 +35,7 @@ export default class HeaderMenu
     }
 
     getLinkEmployeeList(): void{
-        cy.get(this.VIEW_EMPLOYEE_LIST)
+        cy.get(this.VIEW_EMPLOYEE_LIST).click()
     }
 
     getLinkDirectory(): void{

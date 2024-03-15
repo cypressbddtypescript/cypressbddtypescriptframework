@@ -34,11 +34,11 @@ declare global {
 //   })
 
   beforeEach(function(){
-    cy.fixture('testData').then(function(data){
-        this.data = data
-    })
+    cy.fixture('testData').then(function(data:any[]){     
 
-    //Cypress.Cookies.defaults({
-     // preserve: ['Loggedin','orangehrm'],
-    //})
+      this.firstUserData = data[0];
+      this.secondUserData = data[1];
+     
+     
+    })
 })
